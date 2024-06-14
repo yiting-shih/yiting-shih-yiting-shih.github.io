@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>首頁</title>
+  <style>
+    /* 隱藏音樂播放器 */
+    #hidden-audio {
+        display: none;
+    }
+</style>
+  <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+  <!-- Google Font Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- Animate.CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Swiper CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- 隱藏的音樂播放器，設置為隱藏並啟用循環播放 -->
+  <audio id="hidden-audio" src="music/chums.mp3" loop autoplay></audio>
+
+  <script>
+      // 確保音樂自動播放
+      document.addEventListener('DOMContentLoaded', function() {
+          var audio = document.getElementById('hidden-audio');
+          audio.play();
+      });
+  </script>
+  <div class="container">
+    <!-- 頁首區 -->
+    <header>
+      <div class="upperPart">
+        <div class="nav">
+          <h1 class="logo"><a href="index.html">Chums Logo</a></h1>
+          <figure><img src="./images/menu.svg" alt="menu"></figure>
+          <img src="./images/ribbon.svg" class="ribbon">
+        </div>
+        <div class="nav_rwd">
+          <img src="./images/menuL.png" alt="主選單" class="menuL">
+          <img src="./images/return.png" alt="返回" class="back">
+          <a href="index.html" class="logo"><img src="./images/logo.svg" alt="Chums logo"></a>
+          <a href="#" class="magXs"><img src="./images/magnifierXs.svg" alt="search"></a>
+        </div>
+        <div class="slide-menu">
+          <div class="upper">
+            <span class="material-symbols-outlined">
+              close
+            </span>
+            <h2><a href="index.html"><img src="./images/logo.svg" alt=""></a></h2>
+            <ul class="flex_full">
+              <li><a href="story.html">關於我們</a></li>
+              <li><a href="ranking.html">熱銷排行</a></li>
+              <li><a href="news.html">最新消息</a></li>
+              <li><a href="store.html">門市資訊</a></li>
+              <li><a href="login.html">會員登入</a></li>
+            </ul>
+          </div>
+          <div class="lower">
+            <img src="./images/bird_hi.svg" alt="booby bird" id="booby">
+            <div class="area">
+              <ul>
+                <li><a href="https://www.facebook.com/chumsTW/?locale=zh_TW" class="fb" target="_blank">facebook</a></li>
+                <li><a href="https://www.youtube.com/user/ChumsOfficial" class="yt" target="_blank">Youtube</a></li>
+                <li><a href="https://www.instagram.com/chums_tw/" class="ig" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide-menuM">
+          <div class="upper">
+            <ul>
+              <li><a href="story.html">關於我們</a></li>
+              <li><a href="ranking.html">熱銷排行</a></li>
+            </ul>
+            <ul>
+              <li><a href="news.html">最新消息</a></li>
+              <li><a href="store.html">門市資訊</a></li>
+              <li><a href="login.html">會員登入</a></li>
+            </ul>
+          </div>
+          <div class="lower">
+            <img src="./images/bird_hi.svg" alt="" id="booby">
+            <div class="area">
+
+              <ul>
+                <li><a href="https://www.facebook.com/chumsTW/?locale=zh_TW" class="fb">facebook</a></li>
+                <li><a href="https://buy.line.me/s/topic/CHUMS" class="line">line</a></li>
+                <li><a href="https://www.youtube.com/user/ChumsOfficial" class="yt">Youtube</a></li>
+                <li><a href="https://www.instagram.com/chums_tw/" class="ig">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img src="./images/slogan.svg"alt="" id="slogan">
+        <img src="./images/cloud.svg" alt="" class="cloud cloud0">
+        <img src="./images/cloud.svg" alt="" class="cloud cloud1">
+        <img src="./images/cloud.svg" alt="" class="cloud cloud2">
+        <img src="./images/cloud.svg" alt="" class="cloud cloud3">
+        <img src="./images/cloud.svg" alt="" class="cloud cloud4">
+        <img src="./images/cloud.svg" alt="" class="cloud cloud5">
+      </div>
+      <img src="./images/mountain.svg" alt="" class="mountain">
+      <div class="lowerPart"></div>
+      <div class="centerPic">
+        <img src="./images/bird_left.svg" alt="" class="bird_left">
+        <img src="./images/flame2.0.gif" alt="" class="fire">
+        <img src="./images/bird_right.svg" alt="" class="bird_right">
+      </div>
+    </header>
+    <!-- 頁尾區 -->
+    <footer>
+      <div class="footer_content">
+      </div>
+    </footer>
+  </div>
+  <!-- Main jQuery -->
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <!-- Swiper JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Main js -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

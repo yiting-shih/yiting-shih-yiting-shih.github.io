@@ -1,0 +1,362 @@
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+            /* 滾回來*/
+            html {
+                scroll-behavior: smooth;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                color: rgb(25, 25, 39);
+                font-family: 'Josefin Sans', sans-serif;
+                background-color: #E0EBF1;
+            }
+
+            /* 間格為0 清除預設*/
+            body,
+            h1,
+            h2,
+            h3,
+            p,
+            ul {
+                margin: 0;
+            }
+
+            .wrap {
+                /* width: 800px; */
+                margin-inline: auto;
+                height: 3500px;
+            }
+
+            section {
+                background-color: #E0EBF1;
+                height: 832px;
+                /* 文字不要貼邊 */
+                padding: 10px 80px;
+            }
+
+            h2 {
+                color: #426273;
+                font-size: 40px;
+                font-size: 600;
+            }
+
+            header {
+                display: flex;
+                /*橫排*/
+                align-items: center;
+                /* 垂直 分散 */
+                justify-content: space-between;
+                /* 水平 平均分散 */
+                /*讓logo跟menu上下居中*/
+                background-color: hsla(0, 0%, 100%, 0.527);
+                padding-inline: 100px;
+                position: sticky;
+                top: 0px;
+                z-index: 9999;
+                height: 70px;
+            }
+
+            header h1.logo {
+                margin-right: auto;}
+                /*撐開中間的距離*/
+            
+             
+
+            header a {
+                color: #324F5E;
+                text-decoration: none;
+                display: block;
+                /*裡面所有超連結都會變區塊*/
+            }
+
+            header nav {
+                height: 100%;
+            }
+            .menu ul {
+                height: 100%;
+                /*讓選單也橫排*/
+                display: flex;
+                /*點點不見*/
+                list-style: none;
+                /*字與字的間鉅*/
+                gap: 30px;
+            }
+            .menu ul li a {
+                height: 100%;
+                line-height: 70px;
+            }
+
+            .menu a {
+                font-size: 20px;
+                padding: 6px 16px;
+                /* background-color: hsla(0, 0%, 100%, 0.527); */
+
+            }
+
+            .menu a:hover {
+                color: aliceblue;
+                background-color: rgb(50, 79, 94);
+            }
+
+            a.anchor {
+                position: relative;
+                top: -114px;
+                visibility: hidden;
+            }
+
+            
+
+            .about {
+                height: 700px;
+                /* background-image: url(image/about.png) */
+            }
+
+            .about h1 {
+                color: #436a7d;
+                font-size: 20pt;
+            }
+            .about-item-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 600px;
+            }
+            .about-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #436a7d;
+            }
+            .about-item h2, .about-item p {
+                display: inline-block;
+            }
+
+            .work {
+                color: #436a7d;
+                font-size: 20pt;
+            }
+
+            .timeline {
+                position: relative;
+                /*設定相對定位讓 Timeline 內容參考*/
+                margin: 0 auto;
+                /*設定區塊居中*/
+                padding: 20px 60px;
+                /*內容縮排*/
+                /* color: whitesmoke; */
+            }
+
+            /*利用偽元素製作中線*/
+            .timeline::after {
+                content: " ";
+                /*設定偽元素的內容*/
+                width: 2px;
+                /*中線寬度*/
+                margin-left: -1px;
+                /*微調中線位置讓它居中(中線寬度除以二)*/
+                background-color: #1A4D6A;
+                position: absolute;
+                top: 20px;
+                bottom: 20px;
+                /*齊上齊下*/
+                left: 50%;
+                /*設定居中*/
+            }
+
+            /* 設定 Timeline 的容器*/
+            .timeline-container {
+                width: 50%;
+                /*容器寬度(可視設計需求自行調整)*/
+                margin-bottom: 24px;
+                /*上下 Timeline 區塊的間隔距離*/
+                padding: 16px 24px;
+                border-radius: 16px;
+                position: relative;
+                /*重要！！這邊要設定相對定位以便移動左右*/
+            }
+
+            /* 設定 Timeline 的圓點*/
+            .timeline-container::after {
+                content: " ";
+                /*設定偽元素的內容*/
+                width: 16px;
+                height: 16px;
+                /*圓點寬高*/
+                background-color: #1A4D6A;
+                border-radius: 50%;
+                /*把方形區塊轉換成圓型*/
+                position: absolute;
+                top: 0px;
+                right: -28px;
+                /*手動調整位置*/
+                z-index: 1;
+                /*避免被蓋掉*/
+            }
+
+            /* 修正右邊的圓點位置 */
+            .right::after {
+                left: -28px;
+                /*手動調整位置*/
+            }
+
+            /* 移動 Timeline 容器靠左 */
+            .left {
+                left: -20px;
+                /*手動調整位置*/
+            }
+
+            /* 移動 Timeline 容器靠右 */
+            .right {
+                left: 50%;
+                margin-left: 20px;
+                /*手動調整位置*/
+            }
+
+            .timeline-container h3,
+            h4,
+            p {
+                margin: 0;
+                /*清除這些標籤的原始邊距*/
+            }
+
+            /*其他裝飾性的設定*/
+            .timeline-year {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 20px;
+                color: #436a7d;
+                margin-bottom: 8px;
+            }
+
+            .timeline-title {
+                color: #436a7d;
+                font-size: 24px;
+            }
+
+            .timeline-content {
+                color: #1A4D6A;
+                font-size: 15px;
+                line-height: 170%;
+            }
+
+            /*中線動態的部分*/
+            /*這部分需要搭配 JavaScript 判斷拉長的時間點效果才會好
+        我先用比較簡單的作法，就是頁面一載入就會開始跑動態*/
+            .timeline::after {
+                height: 0;
+                animation: grow-timeline linear forwards;
+                animation-duration: 1s;
+                /*中線長高的時間*/
+                animation-delay: 0.5s;
+                /*延遲中線開始長高的時間*/
+            }
+
+            @keyframes grow-timeline {
+                to {
+                    height: 95%;
+                }
+
+                /*長高的程度（可自己視需求設定調整）*/
+            }
+
+            .education {
+                color: #436a7d;
+                font-size: 20pt;
+            }
+
+            .picture {
+                width: 100%;
+                aspect-ratio: 1170 / 400;
+                border-radius: 20px;
+                background-size: cover;
+                background: center url(image/三張.png)
+            }
+
+            .home {
+                background-size: cover;
+                background: no-repeat center url(image/home.png);
+            }
+            #resume {
+                padding-top: 150px;
+            }
+            #project {
+                padding-top: 150px;
+            }
+
+
+
+            #contact {
+                padding-top: 100px;
+                width: 100%;
+                height: 700px;
+            }
+            #contact img {
+                display: block;
+                width: 100%;
+            }
+
+            h1.Logo {
+                width: 50px;
+                background-image: url(image/logo.png);
+                background-size: cover;
+                overflow: hidden;
+                text-indent: -999px;
+            }
+
+            /* h1.Logo 01 {
+                width: 50px;
+                background-image: url(image/logo.png);
+                background-size: cover;
+                overflow: hidden;
+                text-indent: -999px;
+            } */
+
+            .logo a {
+                display: block;
+                width: 60px;
+                height: 100px;
+            }
+
+            footer {
+                padding-top: 40px;
+                padding-left: 100px;
+                width: 100%;
+                background: hsl(0, 0%, 55%);
+                height: 150px;
+                /* padding: 90px; */
+                position: relative;
+            }
+            footer div {
+                position: absolute;
+                bottom: 10px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+            }
+            a.top {
+                /* 回頁首按鈕 */
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                color: #324F5E;
+                text-decoration: none;
+                /* background-color:#E0EBF1; */
+                border: solid 1px;
+                border-color: hsl(200, 31%, 28%);
+                display: flex;
+                /*設定flex讓內容置中*/
+                justify-content: center;
+                align-items: center;
+                /*設定定位讓他固定在畫面右下角*/
+                /* position: fixed;
+                right: 20px;
+                bottom: 20px;
+                z-index: 9999; */
+                font-size: 30px;
+                /*設定在最上層，才不會被蓋到*/
+            }
