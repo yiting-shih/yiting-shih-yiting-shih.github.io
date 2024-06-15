@@ -8,11 +8,20 @@
   <meta name="robots" content="noindex, nofollow">
   <title>首頁</title>
   <style>
-    /* 隱藏音樂播放器 */
-    #hidden-audio {
-        display: none;
+    section {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
     }
-</style>
+
+    section audio {
+      position: absolute;
+      z-index: 10;
+      top: 1200px;
+      left: 200px; 
+    }
+  </style>
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
   <!-- Google Font Icons -->
   <link rel="stylesheet"
@@ -36,16 +45,14 @@
 </head>
 
 <body>
-  <!-- 隱藏的音樂播放器，設置為隱藏並啟用循環播放 -->
-  <audio id="hidden-audio" src="music/chums.mp3" loop autoplay></audio>
-
-  <script>
-      // 確保音樂自動播放
-      document.addEventListener('DOMContentLoaded', function() {
-          var audio = document.getElementById('hidden-audio');
-          audio.play();
-      });
-  </script>
+  <section>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Reprehenderit optio rem animi quod veritatis. Delectus 
+     nostrum.</p> -->
+    <audio controls>
+      <source src="music/Y2meta.app - CHUMS (128 kbps).mp3">
+    </audio>
+  </section>
   <div class="container">
     <!-- 頁首區 -->
     <header>
@@ -79,7 +86,8 @@
             <img src="./images/bird_hi.svg" alt="booby bird" id="booby">
             <div class="area">
               <ul>
-                <li><a href="https://www.facebook.com/chumsTW/?locale=zh_TW" class="fb" target="_blank">facebook</a></li>
+                <li><a href="https://www.facebook.com/chumsTW/?locale=zh_TW" class="fb" target="_blank">facebook</a>
+                </li>
                 <li><a href="https://www.youtube.com/user/ChumsOfficial" class="yt" target="_blank">Youtube</a></li>
                 <li><a href="https://www.instagram.com/chums_tw/" class="ig" target="_blank">Instagram</a></li>
               </ul>
@@ -111,7 +119,7 @@
             </div>
           </div>
         </div>
-        <img src="./images/slogan.svg"alt="" id="slogan">
+        <img src="./images/slogan.svg" alt="" id="slogan">
         <img src="./images/cloud.svg" alt="" class="cloud cloud0">
         <img src="./images/cloud.svg" alt="" class="cloud cloud1">
         <img src="./images/cloud.svg" alt="" class="cloud cloud2">
